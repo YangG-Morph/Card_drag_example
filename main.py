@@ -8,7 +8,6 @@ class Card:
     already_clicked = False
     already_hovered = False
     already_dragged = False
-    hovered_card = None
 
     def __init__(self, position):
         self.image = pygame.Surface((75, 100))
@@ -45,7 +44,6 @@ class Card:
         elif not Card.already_dragged:
             self.hovered = False
             Card.already_hovered = False
-            Card.hovered_card = None
 
     def check_drag(self):
         if self.dragged:
